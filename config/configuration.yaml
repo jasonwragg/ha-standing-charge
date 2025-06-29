@@ -1,14 +1,22 @@
-# Loads default set of integrations. Do not remove.
+homeassistant:
+  name: Dev Home
+  latitude: 51.509865
+  longitude: -0.118092
+  elevation: 20
+  unit_system: metric
+  time_zone: Europe/London
+  country: GB
+  currency: GBP
+  allowlist_external_dirs:
+    - "/workspaces/homeassistant/config"
+
 default_config:
 
-# Load frontend themes from the themes folder
-frontend:
-  themes: !include_dir_merge_named themes
+# Load custom components from mounted folder
+custom_components:
 
-automation: !include automations.yaml
-script: !include scripts.yaml
-scene: !include scenes.yaml
+frontend:
 
 logger:
-  logs:
-    custom_components.stadningcharge: debug
+  default: info
+

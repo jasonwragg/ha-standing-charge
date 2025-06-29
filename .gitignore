@@ -1,17 +1,8 @@
-# artifacts
-__pycache__
-.pytest*
-*.egg-info
-*/build/*
-*/dist/*
+# Ignore everything
+*
 
-
-# misc
-.coverage
-coverage.xml
-.ruff_cache
-
-
-# Home Assistant configuration
-config/*
-!config/configuration.yaml
+# Allow these:
+!.gitignore
+!custom_components/
+!.devcontainer/
+!.vscode/
